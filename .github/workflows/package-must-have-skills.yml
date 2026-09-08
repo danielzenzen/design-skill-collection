@@ -1,0 +1,41 @@
+name: Package skill bundles
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manifests/must-have-skills.json'
+      - 'scripts/export-must-have-skills.ps1'
+      - 'scripts/export-all-skills.ps1'
+      - 'SKILL-TIERS.md'
+      - 'SKILL-CHEATSHEET.md'
+      - 'README.md'
+      - 'perfect-design-pipeline.md'
+      - 'skills/**'
+
+jobs:
+  package:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Export must-have skills
+        shell: pwsh
+        run: .\scripts\export-must-have-skills.ps1
+
+      - name: Export all skills
+        shell: pwsh
+        run: .\scripts\export-all-skills.ps1
+
+      - name: Upload must-have skills ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: dz-design-collection-must-have-skills
+          path: dist/must-have-skills.zip
+
+      - name: Upload all skills ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: dz-design-collection-all-skills
+          path: dist/all-skills.zip

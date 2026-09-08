@@ -1,0 +1,34 @@
+name: Sync vendored design skills
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Synchronize skill sources
+        shell: pwsh
+        run: ./scripts/sync-skills.ps1
+
+      - name: Create update pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/sync-design-skills
+          delete-branch: true
+          commit-message: 'chore: sync vendored design skills'
+          title: 'chore: sync vendored design skills'
+          body: |
+            Updates the vendored design-skill repositories from their configured upstreams.
+
+            Review the Files changed tab for the complete upstream diff.
