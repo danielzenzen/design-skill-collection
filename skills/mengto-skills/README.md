@@ -23,6 +23,8 @@ Portable by default. Each skill should work for any user, repo, or workspace unl
 
 Browse [all runnable demos and recreation prompts](DEMOS.md).
 
+Explore the [3D rendering skills](agent-skills/3d/README.md) for ultra-realistic water, virtual tours, sky rays, sky backgrounds, falling leaves, four seasons, detailed textures and models, and Retina rendering at 200%.
+
 Use these skills when you want:
 - repeatable design direction
 - reusable game architecture and gameplay QA
@@ -73,6 +75,17 @@ Good skills tell the agent exactly when to use them, what to do first, what defa
 
 ```txt
 agent-skills/
+  3d/
+    README.md
+    3d-ultra-realistic-water/
+    3d-virtual-tour/
+    3d-sky-rays/
+    3d-sky-background/
+    3d-falling-leaves/
+    3d-four-seasons/
+    3d-high-resolution-textures/
+    3d-high-poly-models/
+    3d-retina-resolution/
   codex/
     audit-verify-explain-grade-5/
       SKILL.md
@@ -80,6 +93,18 @@ agent-skills/
       SKILL.md
     daily-ui-inspiration-capture/
       SKILL.md
+  game-combat/
+    README.md
+    game-dev-combat-animation/
+      SKILL.md
+      references/
+      scripts/
+      templates/
+    game-dev-combat-skill-polish/
+      SKILL.md
+      references/
+      scripts/
+      templates/
   game-development/
     README.md
     build-isometric-arpg/
@@ -147,6 +172,12 @@ agent-skills/
     unicorn-studio/
       SKILL.md
       REFERENCES.md
+  workflow/
+    README.md
+    workflow-progress-screenshots/
+    workflow-score-to-target/
+    workflow-ship-change/
+    workflow-threads-manager/
 ```
 
 Folder contract:
@@ -177,7 +208,7 @@ Conventions:
 
 ## Current library
 
-This snapshot contains **123 skills** across five categories.
+This snapshot contains **157 skills** across eight categories.
 
 Use `find agent-skills -name SKILL.md | sort` for the source of truth.
 
@@ -220,6 +251,12 @@ Files:
 - `agent-skills/ui/design-first-ui-prompting/SKILL.md`
 - `agent-skills/ui/design-first-ui-prompting/ARTICLE.md`
 
+### Game combat (2)
+
+Combat animation and combat skills that read and look like Diablo IV, measured and judged blind. See the [game-combat guide](agent-skills/game-combat/README.md).
+- `game-dev-combat-animation` - build, fix and review attacks and move sets to numbered arm, wrist and hand rules, with per-frame tests on the real mesh and blind critics.
+- `game-dev-combat-skill-polish` - score combat skills out of 10 with two blind judges and raise the weakest to a bar, for readability or for art against a reference such as Diablo IV, with stepped-clock filming, contact strips and judging scripts.
+
 ### Game development (20)
 
 Playable Three.js and browser-game workflows. See the [game-development guide](agent-skills/game-development/README.md) for the skill-selection table and system boundaries.
@@ -258,6 +295,14 @@ Visual styles and page moods:
 
 Additional interaction, narrative, and product systems:
 - `ambient-section-particles`, `beam-glow-states`, `documentary-brutalist-agency`, `editorial-portfolio-chapters`, `editorial-service-booking`, `falling-leaves`, `liquid-metal-border`, `operational-enterprise-ai`, `pointer-trail-emitter`, `product-proof-saas`, `reveal-hover-effect`, `scroll-progress-timeline`, `scroll-scrubbed-visual-sequence`, `scroll-scrubbed-word-reveal`, `scroll-world-storytelling`, `shaders-cursor-ripples`, `thinking-orbs`
+
+### Workflow (4)
+
+How to work with agents on a real project: the rules repeated in every thread, turned into procedures with scripts. See the [workflow guide](agent-skills/workflow/README.md).
+- `workflow-progress-screenshots` - send real screenshots of the start, key moment and result as work progresses, unasked, with headless capture and side-by-side scripts.
+- `workflow-score-to-target` - score work out of 10 on an anchored rubric, judge it independently, and improve round by round until every item hits the target.
+- `workflow-ship-change` - ship every change: screenshots, changelog, tests, own files only, fast-forward push, draft-then-live publish, measured sizes and a 50 MB stop.
+- `workflow-threads-manager` - oversee many agent threads on one repo: what merged, what's live, what's missing from the changelog, what to archive, what got cut off.
 
 ---
 
