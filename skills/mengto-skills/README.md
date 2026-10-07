@@ -23,6 +23,10 @@ Portable by default. Each skill should work for any user, repo, or workspace unl
 
 Browse [all runnable demos and recreation prompts](DEMOS.md).
 
+Explore the [3D rendering skills](agent-skills/3d/README.md) for ultra-realistic water, underwater god rays, virtual tours, sky rays, sky backgrounds, falling leaves, four seasons, detailed textures and models, and Retina rendering at 200%.
+
+Explore the [illustration skills](agent-skills/illustration/README.md) for 14 hand-written SVG illustration styles, from flat and outlined cartoon to halftone, one-line, isometric and vintage emblem, each with example cards, a palette, a drawing kit and a render-and-lint loop.
+
 Use these skills when you want:
 - repeatable design direction
 - reusable game architecture and gameplay QA
@@ -73,6 +77,18 @@ Good skills tell the agent exactly when to use them, what to do first, what defa
 
 ```txt
 agent-skills/
+  3d/
+    README.md
+    3d-ultra-realistic-water/
+    3d-underwater-god-rays/
+    3d-virtual-tour/
+    3d-sky-rays/
+    3d-sky-background/
+    3d-falling-leaves/
+    3d-four-seasons/
+    3d-high-resolution-textures/
+    3d-high-poly-models/
+    3d-retina-resolution/
   codex/
     audit-verify-explain-grade-5/
       SKILL.md
@@ -80,6 +96,34 @@ agent-skills/
       SKILL.md
     daily-ui-inspiration-capture/
       SKILL.md
+  game-combat/
+    README.md
+    fire-smoke-skill-vfx/
+      SKILL.md
+      assets/
+      demo/
+    game-dev-combat-animation/
+      SKILL.md
+      references/
+      scripts/
+      templates/
+    game-dev-combat-skill-polish/
+      SKILL.md
+      references/
+      scripts/
+      templates/
+    ice-frost-skill-vfx/
+      SKILL.md
+      assets/
+      demo/
+    lightning-energy-skill-vfx/
+      SKILL.md
+      assets/
+      demo/
+    water-crystal-skill-vfx/
+      SKILL.md
+      assets/
+      demo/
   game-development/
     README.md
     build-isometric-arpg/
@@ -96,6 +140,22 @@ agent-skills/
       SKILL.md
     test-playable-web-games/
       SKILL.md
+  illustration/
+    README.md
+    illustration-flat/
+    illustration-outlined-cartoon/
+    illustration-bold-pop/
+    illustration-line-interior/
+    illustration-flat-with-black/
+    illustration-framed-panel/
+    illustration-grainy-gouache/
+    illustration-ink-sketch/
+    illustration-vintage-emblem/
+    illustration-halftone-line/
+    illustration-one-line/
+    illustration-isometric-mono/
+    illustration-teal-spot/
+    illustration-two-colour-brush/
   media/
     aura-asset-images/
       SKILL.md
@@ -147,6 +207,12 @@ agent-skills/
     unicorn-studio/
       SKILL.md
       REFERENCES.md
+  workflow/
+    README.md
+    workflow-progress-screenshots/
+    workflow-score-to-target/
+    workflow-ship-change/
+    workflow-threads-manager/
 ```
 
 Folder contract:
@@ -177,7 +243,7 @@ Conventions:
 
 ## Current library
 
-This snapshot contains **123 skills** across five categories.
+This snapshot contains **176 skills** across nine categories.
 
 Use `find agent-skills -name SKILL.md | sort` for the source of truth.
 
@@ -220,6 +286,34 @@ Files:
 - `agent-skills/ui/design-first-ui-prompting/SKILL.md`
 - `agent-skills/ui/design-first-ui-prompting/ARTICLE.md`
 
+### Illustration (14)
+
+Original spot illustrations as hand-written SVG, one skill per style, each with three example cards, a measured palette, a drawing kit, a headless renderer and a linter. See the [illustration guide](agent-skills/illustration/README.md).
+- `illustration-flat` - no outlines, lavender and sunshine fills, floating confetti.
+- `illustration-outlined-cartoon` - inked outlines, big heads, sparkle crosses.
+- `illustration-bold-pop` - navy extrusions, hatching, saturated geometry.
+- `illustration-line-interior` - thin indigo line, white fills, sparse accents.
+- `illustration-flat-with-black` - solid black shapes, denim and leaf green.
+- `illustration-framed-panel` - pastel card, violet frame, pieces breaking out.
+- `illustration-grainy-gouache` - riso grain, soft shading, cosy animals.
+- `illustration-ink-sketch` - wobbly brush line, hatching, googly eyes.
+- `illustration-vintage-emblem` - limited palette, keylines, condensed wordmark.
+- `illustration-halftone-line` - black line, halftone dots, open contours.
+- `illustration-one-line` - continuous loop line, off-register colour.
+- `illustration-isometric-mono` - true isometric, green ramp, platform slab.
+- `illustration-teal-spot` - teal ramp, hard drop shadow, floating extras.
+- `illustration-two-colour-brush` - black brush marker, mint blocks, squiggle camo.
+
+### Game combat (6)
+
+Combat animation and combat skills that read and look like Diablo IV, measured and judged blind, and reusable effect languages for energy, fire, water and ice skills. See the [game-combat guide](agent-skills/game-combat/README.md).
+- `fire-smoke-skill-vfx` - a fire skill's effects as one language in Three.js: ray-marched flames whose turbulence rises with buoyancy, from a white-hot core to deep red tips, with detail band-limited to the flame buffer; walls of fire broken into clumps of unequal tongues with detaching licks; a fire whirl in helical sheets; charcoal smoke lit only by the fire (a streaked curtain, cauliflower billows with hot cracks, wisps); embers that cool to ash, heat haze, and a burned ground whose needles smoulder where it is hot, with a reusable module, a five-beat demo on a scanned CC0 floor and a target-image scorecard.
+- `game-dev-combat-animation` - build, fix and review attacks and move sets to numbered arm, wrist and hand rules, with per-frame tests on the real mesh and blind critics.
+- `game-dev-combat-skill-polish` - score combat skills out of 10 with two blind judges and raise the weakest to a bar, for readability or for art against a reference such as Diablo IV, with stepped-clock filming, contact strips and judging scripts.
+- `ice-frost-skill-vfx` - an ice and frost skill's effects as one language in Three.js: dendritic frost grown on the CPU as a competing tree and revealed on the ground by its arrival time, with hairline feathers, rime, crystal glints and a blazing growth tip; faceted ice spikes ray-traced against their own planes (refraction, total internal reflection, Beer-Lambert blue, bubbles, a fracture network) that erupt along the frost line, crack along visible planes and shatter into pieces that land on a face and rest; low mist banks that churn in place, a blizzard column of fine powder on helical strands, and a scanned snow floor with dunes, crust, a raking moon and two populations of glints, with two reusable modules, a five-beat demo on a scanned CC0 floor and a target-image scorecard.
+- `lightning-energy-skill-vfx` - a skill's effects as one language in Three.js: lightning that reaches out as a stepped leader, flares, holds and fades, one discharge at a time, with forks of forks and hair-fine branchlets; a storm-cloud orb with plasma-globe arcs that churns in place and carries its own torn black shadow; ground strikes that crawl along the stone's cracks; refraction-only air fronts, sparks, fractured debris and ink-negative impact frames, with a reusable module, a five-beat demo on a scanned CC0 floor and a blind-judged scorecard.
+- `water-crystal-skill-vfx` - a water and crystal skill's effects as one language in Three.js: clear water that bends and mirrors instead of glowing teal; a sphere-traced water orb whose drop modes, capillary rings and drifting warp deform it in place, with a crisp inverted horizon and a silver rim; beaded streams wound up out of tide pools, a lash that whips into a torn, lopsided splash crown, and analytic ripple rings and rain; quartz traced against its own planes (total internal reflection, a clamped dispersion fringe, fracture discs, a white-hot root glow and a climbing resonance band) that grows out of the water and shatters into splinters resting on the rock with real contact; flat mirror pools with a moon-glitter column on a tidal rock flat laid out from target images, with a reusable module, a five-beat demo on a scanned CC0 floor and a target-image scorecard.
+
 ### Game development (20)
 
 Playable Three.js and browser-game workflows. See the [game-development guide](agent-skills/game-development/README.md) for the skill-selection table and system boundaries.
@@ -258,6 +352,14 @@ Visual styles and page moods:
 
 Additional interaction, narrative, and product systems:
 - `ambient-section-particles`, `beam-glow-states`, `documentary-brutalist-agency`, `editorial-portfolio-chapters`, `editorial-service-booking`, `falling-leaves`, `liquid-metal-border`, `operational-enterprise-ai`, `pointer-trail-emitter`, `product-proof-saas`, `reveal-hover-effect`, `scroll-progress-timeline`, `scroll-scrubbed-visual-sequence`, `scroll-scrubbed-word-reveal`, `scroll-world-storytelling`, `shaders-cursor-ripples`, `thinking-orbs`
+
+### Workflow (4)
+
+How to work with agents on a real project: the rules repeated in every thread, turned into procedures with scripts. See the [workflow guide](agent-skills/workflow/README.md).
+- `workflow-progress-screenshots` - send real screenshots of the start, key moment and result as work progresses, unasked, with headless capture and side-by-side scripts.
+- `workflow-score-to-target` - score work out of 10 on an anchored rubric, judge it independently, and improve round by round until every item hits the target.
+- `workflow-ship-change` - ship every change: screenshots, changelog, tests, own files only, fast-forward push, draft-then-live publish, measured sizes and a 50 MB stop.
+- `workflow-threads-manager` - oversee many agent threads on one repo: what merged, what's live, what's missing from the changelog, what to archive, what got cut off.
 
 ---
 
