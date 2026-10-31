@@ -9,26 +9,38 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="#web-video-presentation"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-video-presentation-skill.webp" alt="Web Video Presentation Skill" width="100%"></a>
-<br/><a href="#web-video-presentation"><strong>web-video-presentation</strong></a>
-<br/><sub>网页视频 / 演示</sub>
+<a href="#motion-showreel"><img src="./dist/imgs/covers/motion-showreel.webp" alt="Motion Showreel Skill" width="100%"></a>
+<br/><a href="#motion-showreel"><strong>motion-showreel</strong></a>
+<br/><sub>代码渲染的短视频</sub>
 </td>
 <td width="50%" valign="top">
-<a href="#web-design-engineer"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-design-skill.webp" alt="Web Design Skill" width="100%"></a>
-<br/><a href="#web-design-engineer"><strong>web-design-engineer</strong></a>
-<br/><sub>设计 / 前端</sub>
+<a href="#web-video-presentation"><img src="./dist/imgs/covers/web-video-presentation.webp" alt="Web Video Presentation Skill" width="100%"></a>
+<br/><a href="#web-video-presentation"><strong>web-video-presentation</strong></a>
+<br/><sub>网页视频 / 演示</sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="#gpt-image-2"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/gpt-image-2-skill.webp" alt="GPT Image 2 Skill" width="100%"></a>
+<a href="#web-design-engineer"><img src="./dist/imgs/covers/web-design-engineer.webp" alt="Web Design Skill" width="100%"></a>
+<br/><a href="#web-design-engineer"><strong>web-design-engineer</strong></a>
+<br/><sub>设计 / 前端</sub>
+</td>
+<td width="50%" valign="top">
+<a href="#gpt-image-2"><img src="./dist/imgs/covers/gpt-image-2.webp" alt="GPT Image 2 Skill" width="100%"></a>
 <br/><a href="#gpt-image-2"><strong>gpt-image-2</strong></a>
 <br/><sub>图像生成 / Prompt</sub>
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
-<a href="#beautiful-article"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/article/banner.webp" alt="Beautiful Article Skill" width="100%"></a>
+<a href="#beautiful-article"><img src="./dist/imgs/covers/beautiful-article.webp" alt="Beautiful Article Skill" width="100%"></a>
 <br/><a href="#beautiful-article"><strong>beautiful-article</strong></a>
 <br/><sub>任意素材 → 一篇精美的文章</sub>
+</td>
+<td width="50%" valign="top">
+<a href="#kb-retriever"><img src="./dist/imgs/covers/kb-retriever.webp" alt="KB Retriever Skill" width="100%"></a>
+<br/><a href="#kb-retriever"><strong>kb-retriever</strong></a>
+<br/><sub>本地知识库检索</sub>
 </td>
 </tr>
 </table>
@@ -36,7 +48,7 @@
 [![License: MIT](https://img.shields.io/github/license/ConardLi/garden-skills?style=flat-square&color=blue)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ConardLi/garden-skills?style=flat-square)](https://github.com/ConardLi/garden-skills/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#贡献)
-[![Skills count](https://img.shields.io/badge/skills-5-orange?style=flat-square)](#skills-gallery)
+[![Skills count](https://img.shields.io/badge/skills-6-orange?style=flat-square)](#skills-gallery)
 [![Spec](https://img.shields.io/badge/spec-SKILL.md-black?style=flat-square)](https://agentskills.io)
 
 [English](./README.md) · [中文文档](./README.zh-CN.md) · [日本語](./README.ja-JP.md)
@@ -53,9 +65,44 @@
 
 ---
 
+### [`motion-showreel`](./skills/motion-showreel)
+
+![Motion Showreel Skill](./dist/imgs/covers/motion-showreel.webp)
+
+**类别：** 动态图形 / 代码视频
+
+**适合：** 动效作品集、产品片、UI 动效、动态排版、Logo 片头、生成艺术、年代回顾和口播讲解。短片常见 5–60 秒，分章视频最长 20 分钟。
+
+`motion-showreel` 输出 MP4 和可编辑源码。Agent 先确认主题、时长、横竖屏、BGM/音效各自来源与口播方式，再写 brief、确认风格帧。页面用 `render(t)` 逐帧渲染，画面与声音共用时间表。有口播时使用用户原稿 TTS 或用户录音，画面跟随真实语音，音乐和音效配合讲述；长片按章缓存、重建和验收。
+
+亮点：
+
+- **确定性的 `render(t)` 管线**：静帧、抽帧拼图、三方向对比、小样、正片都出自同一个页面；运动模糊、超采样、胶片颗粒都是渲染参数
+- **画面和声音共用一张时间表**：切点、撞击、音效用同一组数字；配乐可以用零依赖的内置合成器、带钢琴采样的 Tone.js，也可以按用户自己的曲子卡点（自动测拍点和 drop）
+- **43 种风格的风格库，是起点不是选择题**：瑞士编辑、水墨、孔版印刷、合成波、软萌 3D、电影片头、像素游戏、漫画分格、国潮纹样、油画笔触、白板手绘解说、数学／概念形变、泥金手抄本……每种都写明质感、运动、镜头语法和声音调色板，可以改造、混搭或自定义
+- **先定声音方向，而不是套一首默认的曲子**：brief 里写清声音对标、律动、和声、配器和戏剧曲线，并有一份声音「默认味」清单
+- **两次确认**：需求确认后写 brief，再确认风格帧（未定风格给 3 个方向），随后自主制作；放手模式保留审美自由
+- **口播和长片**：TTS 必须用用户原稿，支持 Gemini/MiniMax API 与用户录音时间戳；独立选择 BGM/音效来源，人声期间避让，最长 20 分钟按章构建
+- **技术验收和审美判断分开**：尺寸、帧率、时长、帧数、黑帧、响度、真峰值、循环接缝、确定性必须全部 PASS；审片记录交给用户终审
+
+<table>
+<tr>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.zh-CN.md#作品展示"><img src="./dist/imgs/motion-showreel/afterglow.webp" alt="synthwave-neon" /></a><br /><sub><code>synthwave-neon</code><br />专辑片头</sub></td>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.zh-CN.md#作品展示"><img src="./dist/imgs/motion-showreel/boink.webp" alt="soft-3d-toy" /></a><br /><sub><code>soft-3d-toy</code><br />连锁反应</sub></td>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.zh-CN.md#作品展示"><img src="./dist/imgs/motion-showreel/last-stroke.webp" alt="stick ink" /></a><br /><sub><code>stick ink</code><br />游戏预告</sub></td>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.zh-CN.md#作品展示"><img src="./dist/imgs/motion-showreel/umbra.webp" alt="cinematic-title" /></a><br /><sub><code>cinematic-title</code><br />电影片头</sub></td>
+</tr>
+</table>
+
+<sub>↑ 用这个 Skill 做的作品，各截 4 秒——<a href="./skills/motion-showreel/README.zh-CN.md#作品展示"><b>打开作品展示</b></a>，看全部作品（包括 Skill 自己的 80 秒宣传片）和风格画廊。</sub>
+
+链接：[README](./skills/motion-showreel/README.zh-CN.md) · [SKILL.md](./skills/motion-showreel/SKILL.md) · <!-- DOWNLOAD:motion-showreel:start -->[下载 v0.1.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/motion-showreel-v0.1.0/motion-showreel-0.1.0.zip)<!-- DOWNLOAD:motion-showreel:end -->
+
+---
+
 ### [`web-video-presentation`](./skills/web-video-presentation)
 
-![Web Video Presentation Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-video-presentation-skill.webp)
+![Web Video Presentation Skill](./dist/imgs/covers/web-video-presentation.webp)
 
 **类别：** 网页视频 / 演示工程  
 **适合：** 把口播稿、文章、课程、产品演示和 talk 做成视频（网页模拟）。
@@ -91,7 +138,7 @@
 
 ### [`web-design-engineer`](./skills/web-design-engineer)
 
-![Web Design Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-design-skill.webp)
+![Web Design Skill](./dist/imgs/covers/web-design-engineer.webp)
 
 **类别：** 设计 / 前端  
 **适合：** 网页、落地页、仪表盘、交互原型、HTML 幻灯片、动画、UI 样机、数据可视化和设计系统探索。
@@ -138,7 +185,7 @@
 
 ### [`gpt-image-2`](./skills/gpt-image-2)
 
-![GPT Image 2 Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/gpt-image-2-skill.webp)
+![GPT Image 2 Skill](./dist/imgs/covers/gpt-image-2.webp)
 
 **类别：** 图像生成 / Prompt 工程  
 **适合：** 海报、UI 样机、产品图、信息图、学术图、技术架构图、漫画、头像、分镜、品牌板和图像编辑工作流。
@@ -232,7 +279,7 @@
 
 ### [`beautiful-article`](./skills/beautiful-article)
 
-![Beautiful Article Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/article/banner.webp)
+![Beautiful Article Skill](./dist/imgs/covers/beautiful-article.webp)
 
 **类别：** 编辑 · 任意素材 → 一篇精美的文章  
 **适合：** 把 URL / PDF / DOCX / Markdown / 纯文本 / 截图 / 粘贴材料编辑成一篇**比原文更易读、更便于分享和归档的精美文章** —— 长文、briefing、解释文、教程、复盘、视觉随笔、对话访谈转写。
@@ -272,7 +319,7 @@
 
 ### [`kb-retriever`](./skills/kb-retriever)
 
-![Kb Retriever Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/kb-retriever-skill.webp)
+![Kb Retriever Skill](./dist/imgs/covers/kb-retriever.webp)
 
 **类别：** 检索 / 本地知识库  
 **适合：** 从本地 `knowledge/` 目录回答问题，检索结构化文档，并在不撑爆上下文的前提下从 Markdown、文本、PDF、Excel 中提取证据。
@@ -316,7 +363,7 @@
 的 Agent（Claude Code / Cursor / Codex / …）并把 Skill 放到对的目录。
 
 ```bash
-# 一次装上整个仓库（4 个 Skill），最新
+# 一次装上整个仓库（全部 Skill），最新
 npx skills add ConardLi/garden-skills
 
 # 只装某一个 Skill，最新
@@ -363,6 +410,8 @@ npx skills remove kb-retriever  # 卸载
 /plugin install web-design-skills@garden-skills
 /plugin install knowledge-base-skills@garden-skills
 /plugin install image-generation-skills@garden-skills
+/plugin install motion-showreel-skills@garden-skills
+/plugin install beautiful-article-skills@garden-skills
 ```
 
 插件包定义在 [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)：
@@ -373,6 +422,8 @@ npx skills remove kb-retriever  # 卸载
 | `web-design-skills` | `web-design-engineer` |
 | `knowledge-base-skills` | `kb-retriever` |
 | `image-generation-skills` | `gpt-image-2` |
+| `motion-showreel-skills` | `motion-showreel` |
+| `beautiful-article-skills` | `beautiful-article` |
 
 ### 方式 C · Releases 钉版本 `.zip`
 
