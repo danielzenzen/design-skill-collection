@@ -9,26 +9,38 @@
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="#web-video-presentation"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-video-presentation-skill.webp" alt="Web Video Presentation Skill" width="100%"></a>
-<br/><a href="#web-video-presentation"><strong>web-video-presentation</strong></a>
-<br/><sub>Web 動画 / プレゼンテーション</sub>
+<a href="#motion-showreel"><img src="./dist/imgs/covers/motion-showreel.webp" alt="Motion Showreel Skill" width="100%"></a>
+<br/><a href="#motion-showreel"><strong>motion-showreel</strong></a>
+<br/><sub>コードで描くショート動画</sub>
 </td>
 <td width="50%" valign="top">
-<a href="#web-design-engineer"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-design-skill.webp" alt="Web Design Skill" width="100%"></a>
-<br/><a href="#web-design-engineer"><strong>web-design-engineer</strong></a>
-<br/><sub>デザイン / フロントエンド</sub>
+<a href="#web-video-presentation"><img src="./dist/imgs/covers/web-video-presentation.webp" alt="Web Video Presentation Skill" width="100%"></a>
+<br/><a href="#web-video-presentation"><strong>web-video-presentation</strong></a>
+<br/><sub>Web 動画 / プレゼンテーション</sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="#gpt-image-2"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/gpt-image-2-skill.webp" alt="GPT Image 2 Skill" width="100%"></a>
+<a href="#web-design-engineer"><img src="./dist/imgs/covers/web-design-engineer.webp" alt="Web Design Skill" width="100%"></a>
+<br/><a href="#web-design-engineer"><strong>web-design-engineer</strong></a>
+<br/><sub>デザイン / フロントエンド</sub>
+</td>
+<td width="50%" valign="top">
+<a href="#gpt-image-2"><img src="./dist/imgs/covers/gpt-image-2.webp" alt="GPT Image 2 Skill" width="100%"></a>
 <br/><a href="#gpt-image-2"><strong>gpt-image-2</strong></a>
 <br/><sub>画像生成 / プロンプト</sub>
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
-<a href="#beautiful-article"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/article/banner.webp" alt="Beautiful Article Skill" width="100%"></a>
+<a href="#beautiful-article"><img src="./dist/imgs/covers/beautiful-article.webp" alt="Beautiful Article Skill" width="100%"></a>
 <br/><a href="#beautiful-article"><strong>beautiful-article</strong></a>
 <br/><sub>あらゆる素材 → 美しい記事</sub>
+</td>
+<td width="50%" valign="top">
+<a href="#kb-retriever"><img src="./dist/imgs/covers/kb-retriever.webp" alt="KB Retriever Skill" width="100%"></a>
+<br/><a href="#kb-retriever"><strong>kb-retriever</strong></a>
+<br/><sub>ローカルナレッジ検索</sub>
 </td>
 </tr>
 </table>
@@ -36,7 +48,7 @@
 [![License: MIT](https://img.shields.io/github/license/ConardLi/garden-skills?style=flat-square&color=blue)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ConardLi/garden-skills?style=flat-square)](https://github.com/ConardLi/garden-skills/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#コントリビュート)
-[![Skills count](https://img.shields.io/badge/skills-5-orange?style=flat-square)](#skills-gallery)
+[![Skills count](https://img.shields.io/badge/skills-6-orange?style=flat-square)](#skills-gallery)
 [![Spec](https://img.shields.io/badge/spec-SKILL.md-black?style=flat-square)](https://agentskills.io)
 
 [English](./README.md) · [中文文档](./README.zh-CN.md) · [日本語](./README.ja-JP.md)
@@ -53,9 +65,44 @@
 
 ---
 
+### [`motion-showreel`](./skills/motion-showreel)
+
+![Motion Showreel Skill](./dist/imgs/covers/motion-showreel.webp)
+
+**カテゴリ:** モーショングラフィックス / コード動画
+
+**用途:** ショーリール、製品映像、UI モーション、キネティックタイポグラフィ、ロゴ、ループ、回顧映像、ナレーション付き解説。短編は通常 5〜60 秒、章構成の動画は最長 20 分です。
+
+`motion-showreel` は MP4 と編集可能なソースを出力します。テーマ、尺、縦横、BGM・効果音それぞれの出所、ナレーション方式を確認し、brief とスタイルフレームを作成します。`render(t)` の映像と音声が同じ時間軸を共有し、ナレーションがある場合は実音声の区間に映像を合わせます。長編は章ごとのキャッシュと再構築に対応します。
+
+ハイライト:
+
+- **決定論的な `render(t)` パイプライン**: 静止画、コンタクトシート、3 方向の比較、プロキシ、本番レンダーがすべて同じページから出力されます。モーションブラー、スーパーサンプリング、フィルムグレインはレンダーフラグで指定します
+- **映像と音が 1 つのタイムラインを共有**: カット、ヒット、効果音は同じ数値を使います。音楽は依存ゼロの内蔵シンセ、ピアノのサンプルを使える Tone.js、またはユーザーの楽曲（ビートとドロップを自動検出）から選べます
+- **43 スタイルのライブラリは出発点であって選択肢リストではない**: swiss-editorial、ink-wash、risograph、synthwave、soft 3D、cinematic title、pixel game、コミック、国潮パターン、油彩タッチ、ホワイトボード解説、数学・概念モーフィング、装飾写本など。各スタイルにルック、モーション、カメラ文法、サウンドパレットが定義されていて、改造・ミックス・自作ができます
+- **デフォルトの曲ではなく音の方向性を決める**: ブリーフで音のベンチマーク、グルーヴ、和声、楽器編成、ドラマの曲線を決め、避けるべき音の「デフォルト」リストも用意しています
+- **確認は 2 回**: 要件を確認し、その後スタイルフレームを確認します。スタイル未指定なら 3 方向を提示し、確認後は自律制作します。創作の自由度は維持します
+- **ナレーションと長編**: TTS 原稿はユーザー提供が必須です。Gemini/MiniMax API または録音を使い、BGM と効果音は別々に選択して発話中は抑えます。章構成で最長 20 分に対応します
+- **技術的な受け入れと美的判断を分離**: サイズ、fps、尺、フレーム数、黒フレーム、ラウドネス、トゥルーピーク、ループのつなぎ目、決定論性はすべて PASS が必須です。レビューノートはユーザーに渡し、最終判断はユーザーが行います
+
+<table>
+<tr>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.md#showcase"><img src="./dist/imgs/motion-showreel/afterglow.webp" alt="synthwave-neon" /></a><br /><sub><code>synthwave-neon</code><br />アルバムのタイトル</sub></td>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.md#showcase"><img src="./dist/imgs/motion-showreel/boink.webp" alt="soft-3d-toy" /></a><br /><sub><code>soft-3d-toy</code><br />連鎖反応</sub></td>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.md#showcase"><img src="./dist/imgs/motion-showreel/last-stroke.webp" alt="stick ink" /></a><br /><sub><code>stick ink</code><br />ゲームトレーラー</sub></td>
+<td align="center" width="25%"><a href="./skills/motion-showreel/README.md#showcase"><img src="./dist/imgs/motion-showreel/umbra.webp" alt="cinematic-title" /></a><br /><sub><code>cinematic-title</code><br />映画のオープニング</sub></td>
+</tr>
+</table>
+
+<sub>↑ このスキルで作った作品の 4 秒の抜粋。スキル自身の 80 秒トレーラーやスタイルギャラリーを含む全作品は <a href="./skills/motion-showreel/README.md#showcase"><b>ショーケース</b></a> で。</sub>
+
+リンク: [README](./skills/motion-showreel/README.md) · [SKILL.md](./skills/motion-showreel/SKILL.md) · <!-- DOWNLOAD:motion-showreel:start -->[Download v0.1.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/motion-showreel-v0.1.0/motion-showreel-0.1.0.zip)<!-- DOWNLOAD:motion-showreel:end -->
+
+---
+
 ### [`web-video-presentation`](./skills/web-video-presentation)
 
-![Web Video Presentation Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-video-presentation-skill.webp)
+![Web Video Presentation Skill](./dist/imgs/covers/web-video-presentation.webp)
 
 **カテゴリ:** Web 動画 / プレゼンテーションエンジニアリング  
 **用途:** スクリプト、記事、レッスン、製品デモ、トークを、シネマティックな動画として画面録画できるクリック駆動の 16:9 Web プレゼンテーションに変換します。
@@ -91,7 +138,7 @@
 
 ### [`web-design-engineer`](./skills/web-design-engineer)
 
-![Web Design Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-design-skill.webp)
+![Web Design Skill](./dist/imgs/covers/web-design-engineer.webp)
 
 **カテゴリ:** デザイン / フロントエンド  
 **用途:** Web ページ、ランディングページ、ダッシュボード、インタラクティブプロトタイプ、HTML スライドデッキ、アニメーション、UI モックアップ、データビジュアライゼーション、デザインシステムの探求。
@@ -138,7 +185,7 @@
 
 ### [`gpt-image-2`](./skills/gpt-image-2)
 
-![GPT Image 2 Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/gpt-image-2-skill.webp)
+![GPT Image 2 Skill](./dist/imgs/covers/gpt-image-2.webp)
 
 **カテゴリ:** 画像生成 / プロンプトエンジニアリング  
 **用途:** ポスター、UI モックアップ、製品ビジュアル、インフォグラフィック、学術図、技術図、コミック、アバター、ストーリーボード、ブランディングボード、画像編集ワークフロー。
@@ -230,30 +277,9 @@
 
 ---
 
-### [`kb-retriever`](./skills/kb-retriever)
-
-![Kb Retriever Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/kb-retriever-skill.webp)
-
-**カテゴリ:** 検索 / ローカル知識ベース  
-**用途:** ローカルの `knowledge/` ディレクトリから質問に答え、構造化されたドキュメントを検索し、エージェントのコンテキストを溢れさせることなく Markdown、テキスト、PDF、Excel ファイルから根拠を抽出します。
-
-`kb-retriever` は、慎重で段階的な検索を中心に構築されたローカル知識ベースのリトリーバです。ファイル全体を読み込むのではなく、階層的なインデックスファイルをたどり、候補集合を絞り込み、複雑なファイルタイプを正しく処理し、出典付きで回答します。
-
-主な特徴:
-
-- 階層化された `data_structure.md` ファイルを使用して、コンテンツを検索する前に知識ベース内を移動
-- PDF および Excel ファイルに対して**learn-before-process**ルールを強制し、抽出や分析の前に同梱のリファレンスドキュメントを使用
-- 正確なキーワード検索、ローカルウィンドウ読み込み、同義語、反復的なリファインメントを組み合わせる
-- 検索を最大 5 ラウンドに制限し、探索を制御された範囲に保つ
-- `grep`、`pdftotext`、`pdfplumber`、`pandas` のワークフローと、出典を意識した回答フォーマットを含む
-
-リンク: [README](./skills/kb-retriever/README.md) · [SKILL.md](./skills/kb-retriever/SKILL.md) · <!-- DOWNLOAD:kb-retriever:start -->[Download v1.0.1 .zip](https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.1/kb-retriever-1.0.1.zip)<!-- DOWNLOAD:kb-retriever:end -->
-
----
-
 ### [`beautiful-article`](./skills/beautiful-article)
 
-![Beautiful Article Skill](https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/article/banner.webp)
+![Beautiful Article Skill](./dist/imgs/covers/beautiful-article.webp)
 
 **カテゴリ:** 編集 · あらゆる素材 → 美しい記事  
 **用途:** URL / PDF / DOCX / Markdown / プレーンテキスト / スクリーンショット / 貼り付けたメモを、**洗練された共有しやすい記事**に変換します — ロングフォーム、ブリーフィング、解説記事、チュートリアル、レビュー、ビジュアルエッセイ、対話・インタビューの書き起こし。
@@ -290,6 +316,27 @@
 
 ---
 
+### [`kb-retriever`](./skills/kb-retriever)
+
+![Kb Retriever Skill](./dist/imgs/covers/kb-retriever.webp)
+
+**カテゴリ:** 検索 / ローカル知識ベース\
+**用途:** ローカルの `knowledge/` ディレクトリから質問に答え、構造化されたドキュメントを検索し、エージェントのコンテキストを溢れさせることなく Markdown、テキスト、PDF、Excel ファイルから根拠を抽出します。
+
+`kb-retriever` は、慎重で段階的な検索を中心に構築されたローカル知識ベースのリトリーバです。ファイル全体を読み込むのではなく、階層的なインデックスファイルをたどり、候補集合を絞り込み、複雑なファイルタイプを正しく処理し、出典付きで回答します。
+
+主な特徴:
+
+- 階層化された `data_structure.md` ファイルを使用して、コンテンツを検索する前に知識ベース内を移動
+- PDF および Excel ファイルに対して**learn-before-process**ルールを強制し、抽出や分析の前に同梱のリファレンスドキュメントを使用
+- 正確なキーワード検索、ローカルウィンドウ読み込み、同義語、反復的なリファインメントを組み合わせる
+- 検索を最大 5 ラウンドに制限し、探索を制御された範囲に保つ
+- `grep`、`pdftotext`、`pdfplumber`、`pandas` のワークフローと、出典を意識した回答フォーマットを含む
+
+リンク: [README](./skills/kb-retriever/README.md) · [SKILL.md](./skills/kb-retriever/SKILL.md) · <!-- DOWNLOAD:kb-retriever:start -->[Download v1.0.1 .zip](https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.1/kb-retriever-1.0.1.zip)<!-- DOWNLOAD:kb-retriever:end -->
+
+---
+
 ## インストール
 
 サポートされているインストール方法は 5 つあります。自分のスタックに合うものを選んでください:
@@ -313,7 +360,7 @@
 自動検出し、スキルを適切なディレクトリにドロップする標準的な [`npx skills` CLI](https://www.npmjs.com/package/skills) を使用します。
 
 ```bash
-# 4 つのスキルすべてをインストール（最新）
+# コレクションのすべてのスキルをインストール（最新）
 npx skills add ConardLi/garden-skills
 
 # 1 つのスキルだけをインストール（最新）
@@ -360,6 +407,8 @@ npx skills remove kb-retriever  # アンインストール
 /plugin install web-design-skills@garden-skills
 /plugin install knowledge-base-skills@garden-skills
 /plugin install image-generation-skills@garden-skills
+/plugin install motion-showreel-skills@garden-skills
+/plugin install beautiful-article-skills@garden-skills
 ```
 
 プラグインパックは [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) で宣言されています:
@@ -370,6 +419,8 @@ npx skills remove kb-retriever  # アンインストール
 | `web-design-skills` | `web-design-engineer` |
 | `knowledge-base-skills` | `kb-retriever` |
 | `image-generation-skills` | `gpt-image-2` |
+| `motion-showreel-skills` | `motion-showreel` |
+| `beautiful-article-skills` | `beautiful-article` |
 
 ### 方法 C · Releases のバージョン固定 `.zip`
 
