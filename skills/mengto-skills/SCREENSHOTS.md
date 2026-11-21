@@ -2,12 +2,86 @@
 
 Every tracked skill is shown as a real browser rendering of its local `demo/index.html`.
 
-- Captured demos: 87
+- Captured demos: 108
 - Browser viewport: 1280 x 720 (a few source pages export a slightly scaled JPEG)
 - Format: JPEG
 - Reveal hover effect: includes both default and interaction states
 
 Open the [visual browser gallery](SCREENSHOTS.html), or see [DEMOS.md](DEMOS.md) for the complete demo, prompt, and source index.
+
+## 3d (9)
+
+### woodland-chapter-cameras
+
+Stage a live Three.js valley with a creek, instanced trees and layered fog across a hero, story chapter and footer using distinct scroll-driven camera poses.
+
+[Open demo](agent-skills/3d/woodland-chapter-cameras/demo/index.html) · [Skill](agent-skills/3d/woodland-chapter-cameras/SKILL.md) · [Prompt](agent-skills/3d/woodland-chapter-cameras/demo/PROMPT.md)
+
+[![Woodland Chapter Cameras](agent-skills/3d/woodland-chapter-cameras/demo/preview.jpg)](agent-skills/3d/woodland-chapter-cameras/demo/index.html)
+
+### perching-butterfly
+
+Animate a small 3D butterfly that banks in flight, approaches an actual plant surface, settles with hinged wings and takes off when disturbed.
+
+[Open demo](agent-skills/3d/perching-butterfly/demo/index.html) · [Skill](agent-skills/3d/perching-butterfly/SKILL.md) · [Prompt](agent-skills/3d/perching-butterfly/demo/PROMPT.md)
+
+[![Perching Butterfly](agent-skills/3d/perching-butterfly/demo/preview.jpg)](agent-skills/3d/perching-butterfly/demo/index.html)
+
+### forest-floor-specimen
+
+Model an animated 3D botanical study with fern fronds, folded pinnae, a moss cushion and grounded stones for a light editorial Journey section.
+
+[Open demo](agent-skills/3d/forest-floor-specimen/demo/index.html) · [Skill](agent-skills/3d/forest-floor-specimen/SKILL.md) · [Prompt](agent-skills/3d/forest-floor-specimen/demo/PROMPT.md)
+
+[![Forest Floor Specimen](agent-skills/3d/forest-floor-specimen/demo/preview.jpg)](agent-skills/3d/forest-floor-specimen/demo/index.html)
+
+### 3d-construction-sequence
+
+Assemble a structure from its foundations through its roof with synchronized wires and rigid parts.
+
+[Open demo](agent-skills/3d/3d-construction-sequence/demo/index.html) · [Skill](agent-skills/3d/3d-construction-sequence/SKILL.md) · [Prompt](agent-skills/3d/3d-construction-sequence/demo/PROMPT.md)
+
+[![3D Construction Sequence preview](agent-skills/3d/3d-construction-sequence/demo/preview.jpg)](agent-skills/3d/3d-construction-sequence/demo/index.html)
+
+### 3d-harbour-water
+
+Reflect quay lights on rain-dappled water, float a launch on the swell and leave a wake through turns.
+
+[Open demo](agent-skills/3d/3d-harbour-water/demo/index.html) · [Skill](agent-skills/3d/3d-harbour-water/SKILL.md) · [Prompt](agent-skills/3d/3d-harbour-water/demo/PROMPT.md)
+
+[![3D Harbour Water preview](agent-skills/3d/3d-harbour-water/demo/preview.jpg)](agent-skills/3d/3d-harbour-water/demo/index.html)
+
+### 3d-kasumidera-ultra-realism
+
+Build walkable painterly Three.js environments with warm lacquer, modeled joinery, layered clouds and materials reviewed at 200%.
+
+[Open demo](agent-skills/3d/3d-kasumidera-ultra-realism/demo/index.html) · [Skill](agent-skills/3d/3d-kasumidera-ultra-realism/SKILL.md) · [Prompt](agent-skills/3d/3d-kasumidera-ultra-realism/demo/PROMPT.md)
+
+[![Kasumidera Ultra-Realism preview](agent-skills/3d/3d-kasumidera-ultra-realism/demo/preview.jpg)](agent-skills/3d/3d-kasumidera-ultra-realism/demo/index.html)
+
+### 3d-modular-buildings
+
+Model structural bays, entrances and rooflines that read from the approach and at eye height.
+
+[Open demo](agent-skills/3d/3d-modular-buildings/demo/index.html) · [Skill](agent-skills/3d/3d-modular-buildings/SKILL.md) · [Prompt](agent-skills/3d/3d-modular-buildings/demo/PROMPT.md)
+
+[![3D Modular Buildings preview](agent-skills/3d/3d-modular-buildings/demo/preview.jpg)](agent-skills/3d/3d-modular-buildings/demo/index.html)
+
+### 3d-survey-scan
+
+Sweep the occupied scene with a cyan pulse that traces its actual mesh edges.
+
+[Open demo](agent-skills/3d/3d-survey-scan/demo/index.html) · [Skill](agent-skills/3d/3d-survey-scan/SKILL.md) · [Prompt](agent-skills/3d/3d-survey-scan/demo/PROMPT.md)
+
+[![3D Survey Scan preview](agent-skills/3d/3d-survey-scan/demo/preview.jpg)](agent-skills/3d/3d-survey-scan/demo/index.html)
+
+### relight-painted-surfaces
+
+Steer one studio light across a 2D illustration using separate depth, normal and roughness maps.
+
+[Open demo](agent-skills/3d/relight-painted-surfaces/demo/index.html) · [Skill](agent-skills/3d/relight-painted-surfaces/SKILL.md) · [Prompt](agent-skills/3d/relight-painted-surfaces/demo/PROMPT.md)
+
+[![Relight Painted Surfaces preview](agent-skills/3d/relight-painted-surfaces/demo/preview.jpg)](agent-skills/3d/relight-painted-surfaces/demo/index.html)
 
 ## codex (11)
 
@@ -99,6 +173,16 @@ Check a user's latest X/Twitter bookmarks and turn recent saved posts into sourc
 
 ![x-bookmark-quote-posts preview screenshot](agent-skills/codex/x-bookmark-quote-posts/demo/preview.jpg)
 
+## game-development (1)
+
+### game-dev-character-model
+
+Create a realistic, AAA-looking 3D character model for a game or web scene, from a description or a reference video/image, as a textured, rigged GLB standing in a relaxed pose in a lit three.js viewer. Covers designing an original character, the photoreal A-pose concept image, image-to-3D with Meshy or Tripo through Fil, rigging, posing in code, hangar-style lighting, headless capture, and the checks before showing it. Use when the user asks for a character model, a hero/heroine/NPC, "a model as good as X", a realistic human for a game, or to rig or pose a generated character.
+
+[Open demo](agent-skills/game-development/game-dev-character-model/demo/index.html) · [Skill](agent-skills/game-development/game-dev-character-model/SKILL.md) · [Prompt](agent-skills/game-development/game-dev-character-model/demo/PROMPT.md) · Local demo
+
+![game-dev-character-model preview screenshot](agent-skills/game-development/game-dev-character-model/demo/preview.jpg)
+
 ## media (2)
 
 ### aura-asset-images
@@ -117,7 +201,23 @@ Use when you need to pick high-quality Unsplash images for product/design assets
 
 ![unsplash-asset-images preview screenshot](agent-skills/media/unsplash-asset-images/demo/preview.jpg)
 
-## ui (1)
+## ui (3)
+
+### moss-glass-controls
+
+Build Sylva-style dark glass action pills and woodland cards with an inset rim, pale icon well and a gradient that travels around the edge on hover.
+
+[Open demo](agent-skills/ui/moss-glass-controls/demo/index.html) · [Skill](agent-skills/ui/moss-glass-controls/SKILL.md) · [Prompt](agent-skills/ui/moss-glass-controls/demo/PROMPT.md)
+
+[![Moss Glass Controls](agent-skills/ui/moss-glass-controls/demo/preview.jpg)](agent-skills/ui/moss-glass-controls/demo/index.html)
+
+### segmented-field-menu
+
+Create an inset upper-right navigation dock with compact icon-and-label segments, a pale selected segment and a matching footer dock for an editorial landing page.
+
+[Open demo](agent-skills/ui/segmented-field-menu/demo/index.html) · [Skill](agent-skills/ui/segmented-field-menu/SKILL.md) · [Prompt](agent-skills/ui/segmented-field-menu/demo/PROMPT.md)
+
+[![Segmented Field Menu](agent-skills/ui/segmented-field-menu/demo/preview.jpg)](agent-skills/ui/segmented-field-menu/demo/index.html)
 
 ### design-first-ui-prompting
 
@@ -127,7 +227,79 @@ Use when you need design-first, spec-driven, skimmable prompts for UI generation
 
 ![design-first-ui-prompting preview screenshot](agent-skills/ui/design-first-ui-prompting/demo/preview.jpg)
 
-## web-design (73)
+## web-design (82)
+
+### scroll-mesh-survey
+
+Scrub a narrow topology scan across a visible 3D object and its companion editorial figures. Use when a scroll gesture should disclose surface structure in both directions.
+
+[Open demo](agent-skills/web-design/scroll-mesh-survey/demo/index.html) · [Skill](agent-skills/web-design/scroll-mesh-survey/SKILL.md) · [Prompt](agent-skills/web-design/scroll-mesh-survey/demo/PROMPT.md)
+
+[![Scroll Mesh Survey](agent-skills/web-design/scroll-mesh-survey/demo/preview.jpg)](agent-skills/web-design/scroll-mesh-survey/demo/index.html)
+
+### sylva-field-guide-layout
+
+Lay out a botanical editorial UI with continuous vertical rules, sparse diagonal guides, large lightweight typography and aligned chapter labels and specimen captions.
+
+[Open demo](agent-skills/web-design/sylva-field-guide-layout/demo/index.html) · [Skill](agent-skills/web-design/sylva-field-guide-layout/SKILL.md) · [Prompt](agent-skills/web-design/sylva-field-guide-layout/demo/PROMPT.md)
+
+[![Sylva Field Guide Layout](agent-skills/web-design/sylva-field-guide-layout/demo/preview.jpg)](agent-skills/web-design/sylva-field-guide-layout/demo/index.html)
+
+### compose-a-woodland-landing-page
+
+Compose a Sylva-style botanical landing page as a six-chapter field guide, alternating light editorial spreads, dark participation cards and live woodland views.
+
+[Open demo](agent-skills/web-design/compose-a-woodland-landing-page/demo/index.html) · [Skill](agent-skills/web-design/compose-a-woodland-landing-page/SKILL.md) · [Prompt](agent-skills/web-design/compose-a-woodland-landing-page/demo/PROMPT.md)
+
+[![Compose a Woodland Landing Page](agent-skills/web-design/compose-a-woodland-landing-page/demo/preview.jpg)](agent-skills/web-design/compose-a-woodland-landing-page/demo/index.html)
+
+### pollen-pointer-trail
+
+Emit a sparse, distance-spaced trail of airborne pollen from the pointer over a woodland scene, with depth drift, short lives and bounded particles.
+
+[Open demo](agent-skills/web-design/pollen-pointer-trail/demo/index.html) · [Skill](agent-skills/web-design/pollen-pointer-trail/SKILL.md) · [Prompt](agent-skills/web-design/pollen-pointer-trail/demo/PROMPT.md)
+
+[![Pollen Pointer Trail](agent-skills/web-design/pollen-pointer-trail/demo/preview.jpg)](agent-skills/web-design/pollen-pointer-trail/demo/index.html)
+
+### neoclassical-ledger-ui
+
+Design parchment editorial interfaces with neoclassical object paintings, ledger typography and printed rules. Use for art-directed portfolios, finance showcases, or studio case studies.
+
+[Open demo](agent-skills/web-design/neoclassical-ledger-ui/demo/index.html) · [Skill](agent-skills/web-design/neoclassical-ledger-ui/SKILL.md) · [Prompt](agent-skills/web-design/neoclassical-ledger-ui/demo/PROMPT.md)
+
+[![Neoclassical Ledger UI preview](agent-skills/web-design/neoclassical-ledger-ui/demo/preview.jpg)](agent-skills/web-design/neoclassical-ledger-ui/demo/index.html)
+
+### dither-ascii-ink-hover
+
+Reveal warm dither dots and ASCII marks beneath the pointer on an illustration using intersecting CSS masks. Use for a printed, holographic inspection effect with a one-pass scan.
+
+[Open demo](agent-skills/web-design/dither-ascii-ink-hover/demo/index.html) · [Skill](agent-skills/web-design/dither-ascii-ink-hover/SKILL.md) · [Prompt](agent-skills/web-design/dither-ascii-ink-hover/demo/PROMPT.md)
+
+[![Dither and ASCII Ink Hover preview](agent-skills/web-design/dither-ascii-ink-hover/demo/preview.jpg)](agent-skills/web-design/dither-ascii-ink-hover/demo/index.html)
+
+### generate-ledger-logo-register
+
+Generate a family of original fictional wordmarks on a Seedream contact sheet, extract transparent assets, and present them as a partner or studio logo register.
+
+[Open demo](agent-skills/web-design/generate-ledger-logo-register/demo/index.html) · [Skill](agent-skills/web-design/generate-ledger-logo-register/SKILL.md) · [Prompt](agent-skills/web-design/generate-ledger-logo-register/demo/PROMPT.md)
+
+[![Generate a Ledger Logo Register preview](agent-skills/web-design/generate-ledger-logo-register/demo/preview.jpg)](agent-skills/web-design/generate-ledger-logo-register/demo/index.html)
+
+### painted-product-showcase
+
+Build interactive HTML product demos over expansive painted landscapes, with translucent neutral panels, sample data, and stateful charts, invoices or budgets.
+
+[Open demo](agent-skills/web-design/painted-product-showcase/demo/index.html) · [Skill](agent-skills/web-design/painted-product-showcase/SKILL.md) · [Prompt](agent-skills/web-design/painted-product-showcase/demo/PROMPT.md)
+
+[![Painted Product Showcase preview](agent-skills/web-design/painted-product-showcase/demo/preview.jpg)](agent-skills/web-design/painted-product-showcase/demo/index.html)
+
+### scroll-scrubbed-object-handoff
+
+Choreograph a reversible scroll handoff between layered illustrations, transforming a held object into multiple moving pieces that land in a second scene.
+
+[Open demo](agent-skills/web-design/scroll-scrubbed-object-handoff/demo/index.html) · [Skill](agent-skills/web-design/scroll-scrubbed-object-handoff/SKILL.md) · [Prompt](agent-skills/web-design/scroll-scrubbed-object-handoff/demo/PROMPT.md)
+
+[![Scroll-Scrubbed Object Handoff preview](agent-skills/web-design/scroll-scrubbed-object-handoff/demo/preview.jpg)](agent-skills/web-design/scroll-scrubbed-object-handoff/demo/index.html)
 
 ### agency-grid-layout-minimal
 
